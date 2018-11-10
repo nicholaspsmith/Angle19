@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+		"deploy": "npm run build && aws s3 sync ./dist/angle19 s3://angle19.com/ --acl public-read-write"
   },
   "private": true,
   "dependencies": {
